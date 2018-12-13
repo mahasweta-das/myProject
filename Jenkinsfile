@@ -1,12 +1,12 @@
 pipeline {
-  agent { label 'linux' }
+  agent { label 'linux_node1' }
   tools {
     maven 'MAVEN_HOME'
   }
   stages {
     stage('checkout') {
       steps {
-        git 'https://github.com/effectivejenkins/myProject.git'
+        git 'https://github.com/mahasweta-das/myProject.git'
       }
     }
     stage('Build') {
